@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Mouse scroll</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<style>
+
+			.mouse {
+				position: relative;
+				text-align: center;
+				margin: 5vh auto 2vh;
+				width:20px;
+				height: 34px;
+				border: 1px solid #505050;
+				border-radius : 10px;
+				animation-name: mouseanim;
+				animation-duration: 1.6s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease;
+			}
+			.scrollmouse {
+				position: relative;
+				text-align: center;
+				margin: 4px auto;
+				top: 10px;
+				width: 4px;
+				height: 7px;
+				background-color: grey;
+				border-radius: 2px;
+				animation-name: scrollanim;
+				animation-duration: 1.5s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease;
+			}
+			@keyframes scrollanim {
+			    from {top: 0px;
+			    	opacity:0.8}
+			    to {top: 15px;
+			    	opacity:0;}
+			}	
+			@keyframes mouseanim {
+				0%   { top:0px;}
+			    50%  { top:5px; }
+			    100% { top:0px;}   
+			}
+		</style>
+	</head>
+
+
+	<body>
+		<div>
+			<div>
+				<div class="mouse">
+					<div class="scrollmouse"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
